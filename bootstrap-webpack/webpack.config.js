@@ -1,4 +1,8 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractPlugin = new ExtractTextPlugin({
+  filename: 'main.css'
+});
 
 module.exports = {
   mode: 'development',
@@ -10,38 +14,24 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
+        test: /\.js$/,
         use: [
           {
-            // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
-          },
-          {
-            // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader'
-          },
-          {
-            // Loader for webpack to process CSS with PostCSS
-            loader: 'postcss-loader',
+            // babel loader
+            loader: 'babel-loader',
             options: {
-              plugins: function () {
-                return [
-                  require('autoprefixer')
-                ];
-              }
+              presets: ['es2015']
             }
           },
-          {
-            // Loads a SASS/SCSS file and compiles it to CSS
-            loader: 'sass-loader'
-          }
-        ]
+        ],
+        test: /\.(scss)$/,
+        use: extractPlugin.extract({
+          use: ['css-loader', 'sass-loader']
+        })
       }
     ],
-    devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      compress: true,
-      port: 9000
-    }
-  }
+  },
+  plugins: [
+    extractPlugin
+  ]
 };
