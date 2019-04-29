@@ -16,6 +16,6 @@ import '../node_modules/popper.js'
 
 $(document).ready(function() {
   $('#changeTheColorOfH1').on('click', function() {
-    $('h1').css('color', '#007FCC !important')
+    $('h1').css('color', '#007FCC')
   })
 })

@@ -1,5 +1,5 @@
 // custom scss for overriding bootstrap scss
-$pink: red;
+$pink: pink;
 
 // required
 // @import "node_modules/bootstrap/scss/functions";
@@ -13,12 +13,11 @@ $pink: red;
 // @import "node_modules/bootstrap/scss/code";
 // @import "node_modules/bootstrap/scss/grid";
 
-
 // complete bootstrap sass
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 // custom scss
 .exremely-large-fuckin-title {
-    color: $pink;
-    font-size: 3rem;
+  color: $pink;
+  font-size: 3rem;
 }
