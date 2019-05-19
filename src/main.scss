@@ -1,6 +1,9 @@
 // custom scss for overriding bootstrap scss
 $pink: pink;
 
+// custom scss imports
+@import 'mds-typography.scss';
+
 // required
 // @import "node_modules/bootstrap/scss/functions";
 // @import "node_modules/bootstrap/scss/variables";
