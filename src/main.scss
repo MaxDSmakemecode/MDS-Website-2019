@@ -1,26 +1,31 @@
 // custom scss for overriding bootstrap scss
 $pink: pink;
 
-// custom scss imports
-@import 'mds-typography.scss';
+
+// bootstrap scss imports + custom scss imports starting with 'mds-'
 
 // required
-// @import "node_modules/bootstrap/scss/functions";
-// @import "node_modules/bootstrap/scss/variables";
-// @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/functions";
+@import 'mds-variables.scss';
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
 // optional
-// @import "node_modules/bootstrap/scss/reboot";
-// @import "node_modules/bootstrap/scss/type";
-// @import "node_modules/bootstrap/scss/images";
-// @import "node_modules/bootstrap/scss/code";
-// @import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+@import 'mds-navbar.scss';
 
 // complete bootstrap sass
-@import 'node_modules/bootstrap/scss/bootstrap';
+// @import 'node_modules/bootstrap/scss/bootstrap';
 
 // custom scss
-.exremely-large-fuckin-title {
-  color: $pink;
-  font-size: 3rem;
+article {
+  background: #222222;
+  width: 100%;
+  height: 100vh;
 }

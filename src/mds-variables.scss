@@ -1,0 +1,17 @@
+// typography
+$font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif;
+
+// font-weights
+$font-weight-normal: 500;
+$font-weight-bolder: 700;
+
+// Navs
+$nav-link-padding-y: 3rem;
+$navbar-light-color: #fff;
+$navbar-light-hover-color: rgb(129, 129, 129);
+$navbar-light-active-color: #fff;
+$navbar-light-disabled-color: #fff;
+
+.font-black {
+  font-weight: $font-weight-bolder;
+}
