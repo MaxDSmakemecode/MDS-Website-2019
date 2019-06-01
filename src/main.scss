@@ -5,7 +5,7 @@ $blue: #6b9fff;
 
 // required
 @import "node_modules/bootstrap/scss/functions";
-@import 'mds-variables.scss';
+@import '_mds-variables';
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
@@ -17,7 +17,7 @@ $blue: #6b9fff;
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
-@import 'mds-navbar.scss';
+@import '_mds-navbar';
 
 // complete bootstrap sass
 // @import 'node_modules/bootstrap/scss/bootstrap';
@@ -43,6 +43,7 @@ section {
 }
 
 #hero::before {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -50,7 +51,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: url(/images/noisebg.png) repeat top left / 2rem;
+  // background: url('images/noisebg.png') repeat top left / 2rem;
   z-index: 1;
 }
 

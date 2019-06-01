@@ -11,15 +11,12 @@ import '../node_modules/jquery'
 import '../node_modules/popper.js'
 
 $(document).ready(function(){
-
+ 
     // scroll font
-    $('#hero').on('DOMMouseScroll mousewheel', function(event){
+    // important:                HERE put some more scroll functions like when you scroll by mouse or arrow keys
+    $(window).on('DOMMouseScroll mousewheel ', function(){
         var height = $(window).scrollTop();
-        if(event.originalEvent.detail > 0 || event.originalEvent.wheelDeltaY < 0){
-            $('.hero-title-first').css('left', ('-' + (height / 50) + '%'));
-        }
-        else{
-            $('.hero-title-first').css('left', ('-' + (height / 50) + '%'));
-        }
+        // check if section is visible (offset().top) and compare it to scroll position, then move font
+        // $('.hero-title-first').css('left', ('-' + (height / 50) + '%'));
     })
 });
