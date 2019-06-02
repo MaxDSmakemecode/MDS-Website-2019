@@ -14,9 +14,17 @@ $(document).ready(function(){
  
     // scroll font
     // important:                HERE put some more scroll functions like when you scroll by mouse or arrow keys
-    $(window).on('DOMMouseScroll mousewheel ', function(){
-        var height = $(window).scrollTop();
-        // check if section is visible (offset().top) and compare it to scroll position, then move font
-        // $('.hero-title-first').css('left', ('-' + (height / 50) + '%'));
-    })
+    $(window).on('DOMMouseScroll mousewheel keydown', function(event){
+        var scrollTop = $(window).scrollTop(),
+            elementOffset = $('#hero').offset().top,
+            distance = (scrollTop - elementOffset);
+        $('.hero-title-first').css('left', (+ (10 - (distance / 100)) + '%'));
+        if(event.which.keyCode == 40 || event.which.keyCode == 38){
+            $('.hero-title-first').css('left', ('-' + (distance / 100) + '%'));
+        }
+        $('.hero-title-second').css('left', ('+' + (distance / 100) + '%'));
+        if(event.which.keyCode == 40 || event.which.keyCode == 38){
+            $('.hero-title-second').css('left', ('+' + (distance / 100) + '%'));
+        }
+    });
 });

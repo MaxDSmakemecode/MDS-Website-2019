@@ -1,5 +1,7 @@
 // custom scss for overriding bootstrap scss
 $blue: #6b9fff;
+$purple: #B732FF;
+$cyan: #2EF7F0;
 
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
@@ -8,6 +10,7 @@ $blue: #6b9fff;
 @import '_mds-variables';
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+@import "_mds-gradients";
 
 // optional
 @import "node_modules/bootstrap/scss/reboot";
@@ -25,6 +28,7 @@ $blue: #6b9fff;
 // custom scss
 
 $h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 8.665;
 
 article {
   width: 100%;
@@ -38,7 +42,7 @@ section {
 #hero {
   position: relative;
   height: 100vh;
-  background: $primary;
+  @include gradient-bg($blue);
   z-index: 0;
 }
 
@@ -57,16 +61,24 @@ section {
 
 .hero-title-box {
   position: relative;
+  top: 40%;
   padding-top: 50%;
   color: #ffffff;
   overflow: hidden;
 }
 
-h1.hero-title-first {
+h1.hero-title-first,
+h2.hero-title-second {
   position: absolute;
-  top: 40%;
-  left: 0;
+  top: 2rem;
+  left: 10%;
   font-size: $h1-font-size;
   width: 1000%;
   font-weight: $font-weight-bolder;
+}
+
+h2.hero-title-second {
+  top: 8rem;
+  left: 0;
+  font-size: $h2-font-size;
 }

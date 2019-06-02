@@ -1,0 +1,8 @@
+// gradients mixins
+@mixin gradient-bg($blue) {
+    @if $enable-gradients {
+      background: linear-gradient(135deg, mix($blue, $purple, 15%), $cyan) no-repeat;
+    } @else {
+      background-color: $blue;
+    }
+  }
