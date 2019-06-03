@@ -1,3 +1,5 @@
+import { throttle } from 'lodash'
+
 // Bootstrap js everything
 import 'bootstrap'
 
@@ -30,5 +32,7 @@ $(document).ready(function() {
   //     }
   // });
 
-  $(window).on('scroll', handleScroll)
+  const throttledScroll = throttle(handleScroll, 50)
+
+  $(window).on('scroll', throttledScroll)
 })
