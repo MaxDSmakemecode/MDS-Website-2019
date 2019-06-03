@@ -72,14 +72,20 @@ h2.hero-title-second {
   position: absolute;
   top: 2rem;
   left: 10%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
   font-size: $h1-font-size;
   width: 1000%;
   font-weight: $font-weight-bolder;
-  transition: 300ms all ease-in-out;
+  transition: 150ms all ease-in-out;
 }
 
 h2.hero-title-second {
   top: 8rem;
   left: 0;
+  transform: translate3d(0,0,0);
   font-size: $h2-font-size;
 }
