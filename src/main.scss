@@ -1,7 +1,7 @@
 // custom scss for overriding bootstrap scss
-$blue: #6b9fff;
-$purple: #B732FF;
-$cyan: #2EF7F0;
+$blue: #073ea5;
+$purple: rgb(117, 27, 165);
+$cyan: rgb(32, 177, 172);
 
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
@@ -55,7 +55,8 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  // background: url('images/noisebg.png') repeat top left / 2rem;
+  background: url('images/noisebg.png') repeat top left / 2rem;
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -81,6 +82,7 @@ h2.hero-title-second {
   width: 1000%;
   font-weight: $font-weight-bolder;
   transition: 150ms all ease-in-out;
+  z-index: 3;
 }
 
 h2.hero-title-second {

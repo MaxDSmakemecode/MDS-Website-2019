@@ -15,6 +15,7 @@ import '../node_modules/popper.js'
 import handleScroll from './handleScroll'
 
 $(document).ready(function() {
+
   // scroll font
   // important:                HERE put some more scroll functions like when you scroll by mouse or arrow keys
   // $(window).on('DOMMouseScroll mousewheel keydown', function(event){
