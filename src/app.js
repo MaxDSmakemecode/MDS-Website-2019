@@ -13,7 +13,7 @@ import '../node_modules/jquery'
 import '../node_modules/popper.js'
 
 // add anime js
-// import anime from 'lib/anime.es.js';
+import '../node_modules/animejs'
 
 import onLoadEvents from './onLoadEvents'
 
