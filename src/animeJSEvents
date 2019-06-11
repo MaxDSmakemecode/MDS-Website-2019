@@ -1,8 +1,8 @@
 import anime from 'animejs';
 
 export default function translate(element){
-    anime({
-        targets: element,
-        translateX: 500
-      });
+    // anime({
+    //     targets: element,
+    //     translateX: 500
+    //   });
 }
