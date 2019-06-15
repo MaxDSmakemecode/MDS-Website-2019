@@ -1,7 +1,7 @@
 // custom scss for overriding bootstrap scss
-$blue: #073ea5;
-$purple: rgb(117, 27, 165);
-$cyan: rgb(32, 177, 172);
+$blue: #123d94;
+$purple: #540f79;
+$cyan: #0bb3ad;
 
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
@@ -80,7 +80,7 @@ section {
 
 .hero-title-box {
   position: relative;
-  top: 40%;
+  top: 32%;
   padding-top: 50%;
   color: #ffffff;
   overflow: hidden;
@@ -107,7 +107,25 @@ h2.hero-title-second {
   font-size: $h2-font-size;
 }
 
+.mousefollow-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 100vh;
+  background: url(images/crosshairs.png);
+  overflow: hidden;
+  opacity: 0.25;
+  transition: 120ms all;
+}
+
 // Modifiers
+
+.hide--element {
+  display: none;
+}
 
 .translate3d--element {
   transform: translate3d(-10%,0,0);
@@ -116,4 +134,3 @@ h2.hero-title-second {
 .opacity--element {
   opacity: 0;
 }
-

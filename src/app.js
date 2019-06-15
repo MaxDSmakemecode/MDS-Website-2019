@@ -15,7 +15,11 @@ import '../node_modules/popper.js'
 // add anime js
 import anime from '../node_modules/animejs/lib/anime.es.js'
 
+// add onload events
 import onLoadEvents from './onLoadEvents'
+
+// add mouse following background event
+import mouseFollower from './mouseFollower'
 
 $(document).ready(function() {
   // anime({
@@ -26,5 +30,7 @@ $(document).ready(function() {
   //   duration: 800
   // })
   // const throttledScroll = throttle(onLoadEvents, 50)
-  $(window).on('load', onLoadEvents)
+  
+  onLoadEvents();
+  mouseFollower();
 })
