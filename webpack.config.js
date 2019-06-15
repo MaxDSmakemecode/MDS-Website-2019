@@ -9,7 +9,9 @@ module.exports = {
     port: 9000
   },
   mode: 'development',
-  entry: './src/app.js',
+  entry: [
+      './src/app.js'
+    ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')

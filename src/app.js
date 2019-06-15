@@ -26,6 +26,5 @@ $(document).ready(function() {
   //   duration: 800
   // })
   // const throttledScroll = throttle(onLoadEvents, 50)
-
   $(window).on('load', onLoadEvents)
 })
