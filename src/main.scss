@@ -43,7 +43,7 @@ section {
   height: 100%;
 }
 
-// Specific elements
+// landing page
 
 #hero {
   position: relative;
@@ -120,6 +120,18 @@ h2.hero-title-second {
   opacity: 0.25;
   transition: 120ms all;
 }
+
+
+// portfolio sections
+
+.portfolio {
+  position: relative;
+}
+
+.port-text-box {
+  color: #ffffff;
+} 
+
 
 // Modifiers
 
