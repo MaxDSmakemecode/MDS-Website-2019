@@ -42,6 +42,10 @@ module.exports = {
             loader: 'file-loader'
           }
         ]
+      },
+      {
+        test: /\.html$/,
+        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
       }
     ]
   },
