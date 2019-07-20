@@ -1,5 +1,3 @@
-import { throttle } from 'lodash'
-
 // Bootstrap js everything
 import 'bootstrap'
 
@@ -12,25 +10,21 @@ import '../node_modules/jquery'
 // add popper.js
 import '../node_modules/popper.js'
 
-// add anime js
-import anime from '../node_modules/animejs/lib/anime.es.js'
-
 // add onload events
 import onLoadEvents from './onLoadEvents'
 
 // add mouse following background event
 import mouseFollower from './mouseFollower'
 
+// add scroll events
+import scrollHandler from './scrollHandler'
+
+// slider
+import imgSlider from './imgSlider'
+
 $(document).ready(function() {
-  // anime({
-  //   targets: 'div',
-  //   translateX: 250,
-  //   rotate: '1turn',
-  //   backgroundColor: '#FFF',
-  //   duration: 800
-  // })
-  // const throttledScroll = throttle(onLoadEvents, 50)
-  
   onLoadEvents();
   mouseFollower();
+  scrollHandler();
+  imgSlider();
 })

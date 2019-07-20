@@ -1,22 +1,16 @@
 export default function scrollHandler(){
-//   const scrollTop = $(this).scrollTop()
-//   const height = $(this).innerHeight()
-//   const elementOffsetTop = getElementScrollTop('#lorem')
-//   const distance = scrollTop + height - elementOffsetTop
+    $(window).scroll(function(){
+        var windowScroll = $(window).scrollTop();
+        var halfElementHeight = $('#hero').innerHeight() / 2;
 
-//   if (distance > 0) {
-//     // do magic
-//         console.log(distance)
-//         $('.hero-title-first').css('transform', 'translate3d(-' + (distance / 200).toFixed(5) + '%,0,0)');
-//         $('.hero-title-second').css('transform', 'translate3d(' + (distance / 200).toFixed(5) + '%,0,0)');
-//   }
-//   else if (distance < 0) {
-//     // do magic
-//         $('.hero-title-first').css('transform', 'translate3d(' + (distance / 200).toFixed(5) + '%,0,0)');
-//         $('.hero-title-second').css('transform', 'translate3d(-' + (distance / 200).toFixed(5) + '%,0,0)');
-//   }
-// }
+        console.log(windowScroll);
+        console.log(halfElementHeight);
 
-// function getElementScrollTop(element) {
-//   return $(element).offset().top
-};
+        if(windowScroll >= halfElementHeight){
+            $('.port-text-box').fadeIn(500);
+            setTimeout(function(){
+                $('.port-img-box').fadeIn(500);
+            }, 500);
+        }
+    })
+}

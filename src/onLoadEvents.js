@@ -1,4 +1,4 @@
-export default function onLoadEvents(event){
+export default function onLoadEvents(){
 
     // slogan text animation on front page
     sloganAnimation('.hero-title-first', 250);
@@ -9,7 +9,7 @@ export default function onLoadEvents(event){
         $(target).animate({
           'opacity': '1'
         },{
-          step: function(now, fx){
+          step: function(now){
             $(this).css({'transform': 'translate3d(' + now + '%,0,0)'});
           },
           duration: 150,
