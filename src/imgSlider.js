@@ -7,17 +7,21 @@ export default function imgSlider(){
         }
     })
 
+
+    // add active classes 
+
     $(mdsImage).first().addClass('active');
     $(mdsImage).first().addClass('mds-active');
 
-    $(mdsImage).last().addClass('mds-navi-left');
-    $(mdsImage[1]).addClass('mds-navi-right');
+    $(mdsImage).last().addClass('mds-nav-left');
+    $(mdsImage[1]).addClass('mds-nav-right');
 
+    // add navigation function
     function mdsNavi(mdsObject){
         var mdsActive = $('.active');
 
-        $('.mds-navi-left').removeClass('mds-navi-left');
-        $('.mds-navi-right').removeClass('mds-navi-right');
+        $('.mds-nav-right').removeClass('mds-nav-left');
+        $('.mds-nav-right').removeClass('mds-nav-right');
 
         mdsActive.removeClass('active');
         $(mdsObject).addClass('active');
@@ -28,21 +32,22 @@ export default function imgSlider(){
             $(mdsObject).prev().addClass('mds-nav-left');
         }
         else{
-            $(mdsObject).last().addClass('mds-navi-left');
+            $(mdsObject).last().addClass('mds-nav-left');
         }
         if($(mdsObject).next().hasClass('mds-image')){
             $(mdsObject).next().addClass('mds-nav-right');
         }
         else{
-            $(mdsObject).first().addClass('mds-navi-right');
+            $(mdsObject).first().addClass('mds-nav-right');
         }
     }
 
     mdsSlideAuto();
 
-    var mdsTime = 3000;
-
     function mdsSlideAuto(){
+
+        var mdsTime = 3000;
+
         if($('.active').next().hasClass('mds-image')){
             var activeNext = $('.active').next();
         }
@@ -52,8 +57,8 @@ export default function imgSlider(){
 
         var mdsActive = $('.active');
 
-        $('.mds-navi-left').removeClass('mds-navi-left');
-        $('.mds-navi-right').removeClass('mds-navi-right');
+        $('.mds-nav-right').removeClass('mds-nav-left');
+        $('.mds-nav-right').removeClass('mds-nav-right');
 
         mdsActive.removeClass('active');
         $(activeNext).addClass('active');
@@ -64,17 +69,17 @@ export default function imgSlider(){
             $(activeNext).prev().addClass('mds-nav-left');
         }
         else{
-            $(activeNext).last().addClass('mds-navi-left');
+            $(activeNext).last().addClass('mds-nav-left');
         }
         if($(activeNext).next().hasClass('mds-image')){
             $(activeNext).next().addClass('mds-nav-right');
         }
         else{
-            $(activeNext).first().addClass('mds-navi-right');
+            $(activeNext).first().addClass('mds-nav-right');
         }
-    }
 
-    setTimeout(function(){
-        mdsSlideAuto()
-    }, mdsTime);
+        setTimeout(function(){
+            mdsSlideAuto()
+        }, mdsTime);
+    }
 }

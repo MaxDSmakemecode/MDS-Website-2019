@@ -161,13 +161,11 @@ h2.hero-title-second {
 }
 
 // image slider 
-
-
 .mds-slider-wrapper {
   position: relative;
 }
 
-#mds-slider {
+.mds-slider {
   position: absolute;
   top: 5%;
   bottom: 5%;
@@ -180,7 +178,7 @@ h2.hero-title-second {
   background: $black;
 }
 
-#mds-slider ul {
+.mds-slider ul {
   position: absolute;
   top: 0;
   bottom: 0;
