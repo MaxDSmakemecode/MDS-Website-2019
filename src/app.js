@@ -22,9 +22,11 @@ import scrollHandler from './scrollHandler'
 // slider
 import imgSlider from './imgSlider'
 
-$(document).ready(function() {
-  onLoadEvents();
-  mouseFollower();
-  scrollHandler();
-  imgSlider();
-})
+(function($){
+  $(document).ready(function() {
+    onLoadEvents();
+    mouseFollower();
+    scrollHandler();
+    imgSlider();
+  })
+}(jQuery))
