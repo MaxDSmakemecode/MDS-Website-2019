@@ -1,24 +1,32 @@
 export default function mouseFollower(){
     // fade in mouse following image
+    const mouseFollowImg = document.querySelector('.mousefollow-bg');
     setTimeout(function(){
-        $('.mousefollow-bg').fadeIn(500).removeClass('.hide--element')
-    },750)
+        mouseFollowImg.classList.add('opacity-on--element');
+    }, 500);
 
     // mouse following image
-    $('.mousefollow-bg').on('mousemove', function(e){
-        const moveX = (e.pageX * -1 / 15)
-        const moveY = (e.pageY * -1 / 15)
-        $(this).css('background-position', moveX + 'px ' + moveY + 'px')
-    })
+    function move(event){
+        const w = window.innerWidth,
+              h = window.innerHeight,
+              mouseX = event.clientX,
+              mouseY = event.clientY,
+              mouseFollowImgX = (mouseX / w) * 50,
+              mouseFollowImgY = (mouseY / h) * 25;
+        
+        mouseFollowImg.style['background-position'] = mouseFollowImgX + '%' + mouseFollowImgY + '%';
+    }
+
+    window.addEventListener('resize', move);
+    window.addEventListener('mousemove', move);
 
     // fade out on scroll
-    $(window).on('scroll', function(){
-        const height = $(window).scrollTop();
-        if(height > 0){
-            $('.mousefollow-bg').fadeOut(500)
+    document.addEventListener('scroll', function(){
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+            mouseFollowImg.classList.remove('opacity-on--element');
         }
         else{
-            $('.mousefollow-bg').fadeIn(500)
+            mouseFollowImg.classList.add('opacity-on--element');
         }
     })
 }

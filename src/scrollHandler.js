@@ -3,8 +3,8 @@ export default function scrollHandler(){
         var windowScroll = $(window).scrollTop();
         var halfElementHeight = $('#hero').innerHeight() / 2;
 
-        console.log(windowScroll);
-        console.log(halfElementHeight);
+        // console.log(windowScroll);
+        // console.log(halfElementHeight);
 
         if(windowScroll >= halfElementHeight){
             $('.port-text-box').fadeIn(500);

@@ -120,10 +120,8 @@ h2.hero-title-second {
   height: 100vh;
   background: url(images/crosshairs.png);
   overflow: hidden;
-  opacity: 0.25;
-  transition: 120ms all;
+  opacity: 0;
 }
-
 
 // portfolio sections
 
@@ -159,10 +157,14 @@ h2.hero-title-second {
   transform: translate3d(-10%,0,0);
 }
 
-.opacity--element {
-  opacity: 0;
+.opacity-on--element {
+  opacity: 1;
+  transition: opacity 2s;
 }
 
+.opacity-off--element {
+  opacity: 0;
+}
 
 // image slider 
 
