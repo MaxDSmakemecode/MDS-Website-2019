@@ -2,7 +2,7 @@ export default function mouseFollower(){
     // fade in mouse following image
     const mouseFollowImg = document.querySelector('.mousefollow-bg');
     setTimeout(function(){
-        mouseFollowImg.classList.add('opacity-on--element');
+        mouseFollowImg.classList.add('opacity-on-quarter--element');
     }, 500);
 
     // mouse following image
@@ -11,8 +11,8 @@ export default function mouseFollower(){
               h = window.innerHeight,
               mouseX = event.clientX,
               mouseY = event.clientY,
-              mouseFollowImgX = (mouseX / w) * 50,
-              mouseFollowImgY = (mouseY / h) * 25;
+              mouseFollowImgX = - (mouseX / w) * 100,
+              mouseFollowImgY = - (h / mouseY) * 10;
         
         mouseFollowImg.style['background-position'] = mouseFollowImgX + '%' + mouseFollowImgY + '%';
     }
@@ -23,10 +23,10 @@ export default function mouseFollower(){
     // fade out on scroll
     document.addEventListener('scroll', function(){
         if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-            mouseFollowImg.classList.remove('opacity-on--element');
+            mouseFollowImg.classList.remove('opacity-on-quarter--element');
         }
         else{
-            mouseFollowImg.classList.add('opacity-on--element');
+            mouseFollowImg.classList.add('opacity-on-quarter--element');
         }
     })
 }

@@ -3,9 +3,12 @@ export default function onLoadEvents(){
     const sloganAnimation = document.querySelector('.hero-title-first');
 
     setTimeout(function(){
-      sloganAnimation.classList.add('opacity-on--element')
-      sloganAnimation.style.transform = 'translate3d(' + 0 + '%,0,0';
-    }, 250);
+      setTranslate(15, sloganAnimation);
+    }, 500);
+
+    function setTranslate(xPos, el){
+      el.style.transform = 'translate3d(' + xPos + '%, 0, 0);';
+    }
 
     // sloganAnimation('.hero-title-first', 250);
     // sloganAnimation('.hero-title-second', 500);

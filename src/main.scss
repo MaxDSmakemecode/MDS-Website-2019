@@ -99,9 +99,10 @@ h2.hero-title-second {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   font-size: $h1-font-size;
-  width: 1000%;
   font-weight: $font-weight-bolder;
   z-index: 3;
+  transform: translate3d(10%,0,0);
+  transition: opacity 250ms;
 }
 
 h2.hero-title-second {
@@ -154,7 +155,12 @@ h2.hero-title-second {
 }
 
 .translate3d--element {
-  transform: translate3d(-10%,0,0);
+  transform: translate3d(15%,0,0);
+}
+
+.opacity-on-quarter--element {
+  opacity: 0.25;
+  transition: opacity 2s;
 }
 
 .opacity-on--element {
