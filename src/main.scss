@@ -101,8 +101,8 @@ h2.hero-title-second {
   font-size: $h1-font-size;
   font-weight: $font-weight-bolder;
   z-index: 3;
+  opacity: 0;
   transform: translate3d(10%,0,0);
-  transition: opacity 250ms;
 }
 
 h2.hero-title-second {
@@ -164,12 +164,35 @@ h2.hero-title-second {
 }
 
 .opacity-on--element {
-  opacity: 1;
-  transition: opacity 2s;
+  opacity: 1 !important;
 }
 
 .opacity-off--element {
   opacity: 0;
+}
+
+.title-first--animation,
+.title-second--animation {
+  animation-name: title1;
+  animation-duration: 750ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.title-second--animation {
+  animation-delay: 200ms;
+}
+
+@keyframes title1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(10%,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(15%,0,0);
+  }
 }
 
 // image slider 
