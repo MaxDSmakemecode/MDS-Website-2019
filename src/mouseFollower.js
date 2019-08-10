@@ -12,9 +12,9 @@ export default function mouseFollower(){
               mouseX = event.clientX,
               mouseY = event.clientY,
               mouseFollowImgX = - (mouseX / w) * 100,
-              mouseFollowImgY = - (h / mouseY) * 10;
+              mouseFollowImgY = - (mouseY / h) * 100;
         
-        mouseFollowImg.style['background-position'] = mouseFollowImgX + '%' + mouseFollowImgY + '%';
+        mouseFollowImg.style['background-position'] = mouseFollowImgX + 'px ' + mouseFollowImgY + 'px';
     }
 
     window.addEventListener('resize', move);
