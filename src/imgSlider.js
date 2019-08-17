@@ -1,22 +1,36 @@
 export default function imgSlider(){
-    const imgContainer = document.getElementById('mds-img-container');
-    const next = document.getElementById('next');
-    const prev = document.getElementById('prev');
 
-    const images = ['hh01.jpg', 'hh02.jpg', 'hh03.jpg'];
+    // duration of how long a slide stays static
+    const slideInterval = 4000;
 
-    let i = images.length;
+    // get all 'figure' elements as an array
+    function getFigures(){
+        return document.getElementById('mds-carousel').getElementsByTagName('figure');
+    }
+
+    // change the slides with css classes
+    function moveForward(){
+        let pointer = 0;
+        let figures = getFigures();
+
+        for(var i = 0; i < figures.length; i++){
+            if(figures[i].className == 'visible-first' || figures[i].className == 'visible'){
+                figures[i].className = 'hidden';
+                pointer = i;
+            }
+        }
+        if(++pointer == figures.length){
+            pointer = 0;
+        }
+        figures[pointer].className = 'visible';
+        setTimeout(moveForward, slideInterval);
+    }
     
-
-    // function for next slide
-    next.onClick = () => {
-        i = (i < images.length) ? (i = i + 1) : (i = 1);
-        imgContainer.innerHTML = '<img class="img-fluid mds-img" src="' +  images[i - 1] + '">';
+    // function for the slide animation with the selected slide interval
+    function startPlayback(){
+        setTimeout(moveForward, slideInterval);
     }
 
-    // function for previous slide
-    prev.onClick = () => {
-        i = (i < images.length + 1 && i > 1) ? (i = i - 1) : (i = images.length);
-        imgContainer.innerHTML = '<img class="img-fluid mds-img" src="' +  images[i - 1] + '">';
-    }
+    // call the slide animation
+    startPlayback();
 }

@@ -22,6 +22,7 @@ import scrollHandler from './scrollHandler'
 // slider
 import imgSlider from './imgSlider'
 
+// calling all eventsafter DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   onLoadEvents();
   mouseFollower();

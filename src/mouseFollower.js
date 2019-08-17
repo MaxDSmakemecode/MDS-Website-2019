@@ -17,7 +17,7 @@ export default function mouseFollower(){
         mouseFollowImg.style['background-position'] = mouseFollowImgX + 'px ' + mouseFollowImgY + 'px';
     }
 
-    window.addEventListener('resize', move);
+    // window.addEventListener('resize', move);
     window.addEventListener('mousemove', move);
 
     // fade out on scroll

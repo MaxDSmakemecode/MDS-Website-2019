@@ -1,16 +1,43 @@
 export default function scrollHandler(){
-    $(window).scroll(function(){
-        var windowScroll = $(window).scrollTop();
-        var halfElementHeight = $('#hero').innerHeight() / 2;
+    // slide in elements when scrolled to a particular point
 
-        // console.log(windowScroll);
-        // console.log(halfElementHeight);
+    // debounce function to reduce function call amount over scroll
+    function debounce(func, wait = 20, immediate = true){
+        let timeout;
+        return function(){
+            let context = this, args = arguments;
+            let later = function(){
+                timeout = null;
+                if(!immediate)func.apply(context, args);
+            };
+            let callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if(callNow)func.apply(context, args);
+        };
+    };
 
-        if(windowScroll >= halfElementHeight){
-            $('.port-text-box').fadeIn(500);
-            setTimeout(function(){
-                $('.port-img-box').fadeIn(500);
-            }, 500);
-        }
-    })
+    // grab all slides
+    const imagesForFadeIn = document.querySelectorAll('.mds-slide-in');
+
+    function checkSlide(event){
+        imagesForFadeIn.forEach(fadeInImage => {
+            // half way through the image
+            const slideInAt = (window.scrollY + window.innerHeight) - fadeInImage.height / 2;
+            // bottom of the image
+            const imageBottom = fadeInImage.offsetTop + fadeInImage.height;
+            const isHalfShown = slideInAt > fadeInImage.offsetTop;
+            const isNotScrolledPast = window.scrollY < imageBottom;
+            if(isHalfShown && isNotScrolledPast){
+                fadeInImage.classList.add('activate--element');
+            }
+            else{
+                fadeInImage.classList.remove('activate--element');
+            }
+        })
+    }
+
+    // window event scroll
+    // change the wait amount to customize amount of function calls in 'debounce(checkSlide, 500)' for example to have a function call every half second 
+    window.addEventListener('scroll', debounce(checkSlide));
 }
