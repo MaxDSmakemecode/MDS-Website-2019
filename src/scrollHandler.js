@@ -22,8 +22,9 @@ export default function scrollHandler(){
 
     function checkSlide(event){
         imagesForFadeIn.forEach(fadeInImage => {
+            console.log(window.innerHeight)
             // half way through the image
-            const slideInAt = (window.scrollY + window.innerHeight) + fadeInImage.offsetHeight / 2;
+            const slideInAt = (window.scrollY + window.innerHeight) + fadeInImage.offsetHeight;
             // bottom of the image
             const imageBottom = fadeInImage.offsetTop + fadeInImage.offsetHeight;
             const isHalfShown = slideInAt > fadeInImage.offsetTop;

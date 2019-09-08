@@ -152,19 +152,21 @@ h2.hero-title-second {
 .port-slide__in {
   opacity: 0;
   transition: all .5s;
+  color: #ffffff;
 }
 
-.port-slide__in.port-align__left {
-  transform: translate3d(-30%, 0, 0) scale(0.95);
-}
+// .port-slide__in.port-align__left {
+//   transform: translate3d(-30%, 0, 0) scale(0.95);
+// }
 
-.port-slide__in.port-align__right {
-  transform: translate3d(30%, 0, 0) scale(0.95);
-}
+// .port-slide__in.port-align__right {
+//   transform: translate3d(30%, 0, 0) scale(0.95);
+// }
 
 .port-slide__in.port-slide-in__active {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
+  color: red;
 }
 
 // Modifiers
