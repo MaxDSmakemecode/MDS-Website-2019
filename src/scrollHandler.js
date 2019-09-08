@@ -22,20 +22,23 @@ export default function scrollHandler(){
 
     function checkSlide(event){
         imagesForFadeIn.forEach(fadeInImage => {
-            console.log(window.innerHeight)
+            console.log()
             // half way through the image
-            const slideInAt = (window.scrollY + window.innerHeight) + fadeInImage.offsetHeight;
+            const elementTop = window.scrollY + fadeInImage.getBoundingClientRect().top + fadeInImage.getBoundingClientRect().height / 2;
             // bottom of the image
-            const imageBottom = fadeInImage.offsetTop + fadeInImage.offsetHeight;
-            const isHalfShown = slideInAt > fadeInImage.offsetTop;
-            const isNotScrolledPast = window.scrollY < imageBottom;
+            const isHalfShown = window.scrollY + window.innerHeight > elementTop;
+            const isNotScrolledPast = window.scrollY < window.scrollY + fadeInImage.getBoundingClientRect().top + fadeInImage.getBoundingClientRect().height;
+
             if(isHalfShown && isNotScrolledPast){
-                fadeInImage.classList.remove('port-slide-in__active');      
-            }
-            else{
                 fadeInImage.classList.add('port-slide-in__active');
             }
+            else{
+                fadeInImage.classList.remove('port-slide-in__active');
+            }
         })
+
+        // console log a DOM node (console.log(fadeInImage)), then right click on returned node and click "Store as global variable";
+        // 
     }
 
     // window event scroll
