@@ -131,28 +131,40 @@ h2.hero-title-second {
   position: relative;
 }
 
-.port-text-box {
+.port-text__box {
   font-size: $font-size-lg;
-  display: none;
 }
 
-.port-img-box {
+.port-img__box {
   position: relative;
-  opacity: 0;
   width: 100%;
   height: 100%;
-  transform: translate3d(-20%,0,0) scale(0.95);
-}
-
-.port-img-box.activate--element {
-  opacity: 1;
-  transform: translate3d(0,0,0) scale(1);
 }
 
 .port-title {
   font-size: $display4-size;
   text-align: center;
   margin: 3rem 0;
+}
+
+// portfolio slide in elements
+
+.port-slide__in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.port-slide__in.port-align__left {
+  transform: translate3d(-30%, 0, 0) scale(0.95);
+}
+
+.port-slide__in.port-align__right {
+  transform: translate3d(30%, 0, 0) scale(0.95);
+}
+
+.port-slide__in.port-slide-in__active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
 // Modifiers
@@ -204,27 +216,27 @@ h2.hero-title-second {
 
 // image slider 
 
-.mds-image-slider{
+.port-image__slider {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-#mds-carousel {
+#port-image__carousel {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-#mds-carousel > figure {
+#port-image__carousel > figure {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#mds-carousel > figure.visible-first,
-#mds-carousel > figure.visible {
+#port-image__carousel > figure.visible-first,
+#port-image__carousel > figure.visible {
   z-index: 1;
   animation: anime 500ms linear;
   animation-fill-mode: forwards;
@@ -239,7 +251,7 @@ h2.hero-title-second {
   }
 }
 
-#mds-carousel > figure.visible {
+#port-image__carousel > figure.visible {
   z-index: 1;
   animation: anime2 500ms linear;
   animation-fill-mode: forwards;
@@ -254,7 +266,7 @@ h2.hero-title-second {
   }
 }
 
-#mds-carousel > figure.hidden {
+#port-image__carousel > figure.hidden {
   z-index: 0;
   animation: anime3 500ms linear;
   animation-fill-mode: forwards;

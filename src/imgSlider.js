@@ -5,7 +5,7 @@ export default function imgSlider(){
 
     // get all 'figure' elements as an array
     function getFigures(){
-        return document.getElementById('mds-carousel').getElementsByTagName('figure');
+        return document.getElementById('port-image__carousel').getElementsByTagName('figure');
     }
 
     // change the slides with css classes
