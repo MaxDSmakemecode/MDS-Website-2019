@@ -63,23 +63,31 @@
               </div>
             </div>
             <div class="col-sm-8">
-              <div class="port-img__box">
+              <div id="slider-1">
+                <div class="prev">left</div>
+                <div class="next">right</div>
+                <div class="slider">1</div>
+                <div class="slider">2</div>
+                <div class="slider">3</div>
+                <div class="slider">4</div>
+              </div>
+              <!-- <div class="port-img__box">
                 <div class="port-image-slider">
                   <div id="port-image-slider__carousel">
-                    <figure class="mds-slides1">
+                    <figure>
                       <img class="img-fluid" src="hh01.jpg" alt="Heilpraktikerin Heinrich Website, unterschiedliche Devices" title="Heilpraktikerin Heinrich Website, unterschiedliche Devices">
                     </figure>
-                    <figure class="mds-slides1">
+                    <figure>
                       <img class="img-fluid" src="hh02.jpg" alt="Heilpraktikerin Heinrich Printmedien" title="Heilpraktikerin Heinrich Printmedien">
                     </figure>
-                    <figure class="mds-slides1">
+                    <figure>
                       <img class="img-fluid" src="hh03.jpg" alt="Heilpraktikerin Heinrich Printmedien Vogelperspektive" title="Heilpraktikerin Heinrich Printmedien Vogelperspektive">
                     </figure>
                     <div class="port-image-slider__left-arrow" onclick="plusDivs(-1, 1)">&lt;</div>
                     <div class="port-image-slider__right-arrow" onclick="plusDivs(1, 1)">&gt;</div>
                   </div>
                 </div>   
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -93,30 +101,5 @@
 
     </article>
     <script src="bundle.js"></script>
-    <script>
-      var slideIndex = [1, 1];
-      var slideId = ['mds-slides1'];
-      showDivs(1, 0);
-      showDivs(1, 1);
-
-      function plusDivs(n, no){
-        showDivs(slideIndex[no] += n, no);
-      }
-
-      function showDivs(n, no){
-        var i;
-        var x = document.getElementsByClassName(slideId[no]);
-        if(n > x.length){
-          slideIndex[no] = 1;
-        }
-        if(n < 1){
-          slideIndex[no] = x.length;
-        }
-        for(i = 0; i < x.length; i++){
-          x[i].style.display = 'none';
-        }
-        x[slideIndex[no] - 1].style.display = 'block';
-      }
-    </script>
   </body>
 </html>

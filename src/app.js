@@ -27,5 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
   onLoadEvents();
   mouseFollower();
   scrollHandler();
-  imgSlider();
+  // assume 3 slider are present
+  const homeSlider = document.querySelector("#slider-1")
+  // const contactSlider = document.querySelector("#slider-2")
+  // const pornoSlider = document.querySelector("#slider-3")
+
+  const sliders = [homeSlider]
+
+  sliders.forEach(slider => {
+    imgSlider(slider)
+  })
 })
