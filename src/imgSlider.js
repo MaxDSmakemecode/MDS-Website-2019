@@ -1,16 +1,17 @@
 function updateSlides(elements, index) {
     elements.forEach((element, i) => {
-      element.classList.remove("is-active")
+      element.classList.remove("mds-active")
+      element.classList.remove("mds-slider-first")
       if (index === i) {
-        element.classList.add("is-active")
+        element.classList.add("mds-active")
       }
     })
   }
   
   export default function imgSlider(slider) {
-    const slides = slider.querySelectorAll(".slider")
-    const prevButton = slider.querySelector(".prev")
-    const nextButton = slider.querySelector(".next")
+    const slides = slider.querySelectorAll(".mds-slider")
+    const prevButton = slider.querySelector(".mds-prev")
+    const nextButton = slider.querySelector(".mds-next")
   
     let activeIndex = 0
   

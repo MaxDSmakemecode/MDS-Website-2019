@@ -130,6 +130,8 @@ h2.hero-title-second {
 
 .portfolio {
   position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 .port-text__box {
@@ -217,42 +219,43 @@ h2.hero-title-second {
 
 // image slider 
 
-.port-image-slider {
+.mds-slide-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 37%;
 }
 
-#port-image-slider__carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.port-image-slider__left-arrow,
-.port-image-slider__right-arrow {
+.mds-next,
+.mds-prev {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 50%;
-  height: 95%;
-  font-size: 1.5rem;
-  font-weight: $font-weight-bold;
-  padding-top: 30%;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 2rem;
   cursor: pointer;
-  background: rgba(0,0,0,0.25);
 }
 
-.port-image-slider__right-arrow {
-  right: 0;
+.mds-next {
   left: auto;
-  text-align: right;
-}
+  right: 5%;
+} 
 
-#port-image-slider__carousel > figure {
+.mds-slider {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.mds-slider-first {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.mds-active {
+  opacity: 1;
+  transition: all 500ms;
 }

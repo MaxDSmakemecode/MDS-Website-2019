@@ -27,12 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
   onLoadEvents();
   mouseFollower();
   scrollHandler();
-  // assume 3 slider are present
-  const homeSlider = document.querySelector("#slider-1")
-  // const contactSlider = document.querySelector("#slider-2")
-  // const pornoSlider = document.querySelector("#slider-3")
 
-  const sliders = [homeSlider]
+  // multiple slider call
+  const sliderOne = document.querySelector("#mds-slider-1");
+  const sliderTwo = document.querySelector("#mds-slider-2");
+  const sliderThree = document.querySelector("#mds-slider-3");
+  const sliderFour = document.querySelector("#mds-slider-4");
+  const sliderFive = document.querySelector("#mds-slider-5");
+  const sliderSix = document.querySelector("#mds-slider-6");
+
+  const sliders = [sliderOne, sliderTwo, sliderThree, sliderFour, sliderFive, sliderSix]
 
   sliders.forEach(slider => {
     imgSlider(slider)
