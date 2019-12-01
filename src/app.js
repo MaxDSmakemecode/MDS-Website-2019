@@ -13,6 +13,9 @@ import '../node_modules/popper.js'
 // add onload events
 import onLoadEvents from './onLoadEvents'
 
+// smooth scrolling
+import smoothScroll from './smoothScroll'
+
 // add mouse following background event
 import mouseFollower from './mouseFollower'
 
@@ -23,8 +26,9 @@ import scrollHandler from './scrollHandler'
 import imgSlider from './imgSlider'
 
 // calling all eventsafter DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
+  smoothScroll();
   mouseFollower();
   scrollHandler();
 
