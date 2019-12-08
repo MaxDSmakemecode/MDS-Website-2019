@@ -5,3 +5,7 @@
   background: transparent;
   z-index: 999;
 }
+
+.nav-link {
+  @include transition
+}

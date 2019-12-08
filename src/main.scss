@@ -2,6 +2,8 @@
 $blue: #0c2559;
 $purple: #390952;
 $cyan: #16605e;
+$gray-800: #21272d;
+$gray-900: #12161a;
 
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
@@ -10,9 +12,9 @@ $cyan: #16605e;
 @import '_mds-variables';
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
-@import "_mds-gradients";
 
 // optional
+@import "_mds-gradients";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
@@ -31,14 +33,26 @@ $cyan: #16605e;
 
 $h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 8.665;
+$h4-font-size: $font-size-base * 5;
+$lead-font-size: $font-size-base * 2;
+
+$display4-size: 2.5rem;
+
+// enable boostrap scss effects
+$enable-shadows: true;
 
 // General elements
 
 body {
   color: $white;
+  font-weight: $font-weight-light;
 }
 
 article {
+  width: 100%;
+}
+
+main {
   width: 100%;
 }
 
@@ -68,7 +82,8 @@ section {
   z-index: 1;
 }
 
-#hero:before {
+#hero:before,
+.mds-gray-background:before {
   content: '';
   position: fixed;
   top: 0;
@@ -81,6 +96,11 @@ section {
   opacity: .25;
   z-index: 2;
   background-size: 10rem;
+}
+
+.mds-gray-background:before {
+  position: absolute;
+  z-index: 1;
 }
 
 .hero-title-box {
@@ -126,16 +146,34 @@ h2.hero-title-second {
   transition: 350ms all;
 }
 
+// main part
+.mds-gray-background {
+  position: relative;
+  @include gradient-x;
+  @include box-shadow(0px -2px 12px 3px rgba(0,0,0,.75));
+  padding-top: 10rem;
+}
+
 // portfolio sections
 
-.portfolio {
+.portfolio,
+.portfolio-start {
   position: relative;
   width: 100%;
   height: 100vh;
+  margin-bottom: 16rem;
+}
+
+.portfolio-start {
+  margin-bottom: 0;
 }
 
 .port-text__box {
   font-size: $font-size-lg;
+}
+
+.port-text__box:first-child {
+  margin-top: -.45rem;
 }
 
 .port-img__box {
@@ -145,24 +183,33 @@ h2.hero-title-second {
 }
 
 .port-title {
-  font-size: $display4-size;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-size: $display2-size;
   text-align: center;
-  margin: 3rem 0;
+  margin: 0 0 10rem 0;
+}
+
+.port-subtitle {
+  font-size: $display4-size;
+  margin-bottom: 2rem;
+  font-weight: $font-weight-light;
 }
 
 // portfolio slide in elements
 
 .port-slide__in {
   opacity: 0;
-  transition: all .5s;
+  transition: all .35s;
 }
 
 .port-slide__in.port-align__left {
-  transform: translate3d(-30%, 0, 0) scale(.95);
+  transform: translate3d(-30%, 0, 0) scale(.8);
 }
 
 .port-slide__in.port-align__right {
-  transform: translate3d(30%, 0, 0) scale(.95);
+  transform: translate3d(30%, 0, 0) scale(.8);
 }
 
 .port-slide__in.port-slide-in__active {
@@ -172,6 +219,7 @@ h2.hero-title-second {
 
 // Modifiers
 
+// JS related modifiers
 .hide--element {
   display: none;
 }
@@ -217,29 +265,48 @@ h2.hero-title-second {
   }
 }
 
+
+
 // image slider 
 
 .mds-slide-container {
   position: relative;
   width: 100%;
-  height: 37%;
+  padding-bottom: 66.4%;
 }
 
 .mds-next,
 .mds-prev {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 0;
+  color: $black;
+  width: 50%;
+  height: 100%;
   transform: translateY(-50%);
   z-index: 3;
-  font-size: 2rem;
+  font-size: $lead-font-size;
+  text-align: center;
   cursor: pointer;
 }
 
 .mds-next {
   left: auto;
-  right: 5%;
-} 
+  right: 0;
+}
+
+.mds-next i,
+.mds-prev i {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  display: block;
+}
+
+.mds-next i {
+  left: auto;
+  right: 2%;
+}
 
 .mds-slider {
   position: absolute;

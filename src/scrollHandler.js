@@ -17,7 +17,7 @@ export default function scrollHandler(){
         };
     };
 
-    // grab all slides
+    // grab all scroll interactive slide in
     const imagesForFadeIn = document.querySelectorAll('.port-slide__in');
 
     function checkSlide(event){

@@ -5,13 +5,16 @@ import 'bootstrap'
 import './main.scss'
 
 // add jQuery
-import '../node_modules/jquery'
+// import '../node_modules/jquery'
 
 // add popper.js
-import '../node_modules/popper.js'
+// import '../node_modules/popper.js'
 
 // add onload events
 import onLoadEvents from './onLoadEvents'
+
+// smooth scrolling
+import burgerNav from './burgerNav'
 
 // smooth scrolling
 import smoothScroll from './smoothScroll'
@@ -30,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   onLoadEvents();
   smoothScroll();
   mouseFollower();
+  burgerNav();
   scrollHandler();
 
   // multiple slider call
