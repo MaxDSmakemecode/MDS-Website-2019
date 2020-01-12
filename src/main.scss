@@ -5,6 +5,10 @@ $cyan: #16605e;
 $gray-800: #21272d;
 $gray-900: #12161a;
 
+// line heights
+$headings-line-height: 1.7;
+// $display-line-height is the same
+
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
 // required
@@ -31,8 +35,10 @@ $gray-900: #12161a;
 
 // Typography
 
+// font sizes
 $h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 8.665;
+$h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 5;
 $lead-font-size: $font-size-base * 2;
 
@@ -46,6 +52,7 @@ $enable-shadows: true;
 body {
   color: $white;
   font-weight: $font-weight-light;
+
 }
 
 article {
@@ -156,7 +163,7 @@ h2.hero-title-second {
 
 // portfolio sections
 
-.portfolio,
+.mds-section,
 .portfolio-start {
   position: relative;
   width: 100%;
@@ -165,14 +172,19 @@ h2.hero-title-second {
 }
 
 .portfolio-start {
-  margin-bottom: 0;
+  margin-bottom: 32rem;
 }
 
-.port-text__box {
+.mds-intro__text {
+  font-size: $h3-font-size;
+  line-height: $display-line-height;
+}
+
+.mds-text__box {
   font-size: $font-size-lg;
 }
 
-.port-text__box:first-child {
+.mds-text__box:first-child {
   margin-top: -.45rem;
 }
 
@@ -182,13 +194,19 @@ h2.hero-title-second {
   height: 100%;
 }
 
-.port-title {
+.mds-title-text,
+.mds-title {
   position: absolute;
   top: 35%;
   left: 35%;
   font-size: $display2-size;
   text-align: center;
-  margin: 0 0 10rem 0;
+}
+
+.mds-title-text {
+  top: 0;
+  left: 0;
+  padding-top: 12%;
 }
 
 .port-subtitle {
