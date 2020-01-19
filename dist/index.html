@@ -348,22 +348,21 @@
         <h3 class="mds-title-text position-relative">CONTACT</h3>
         <div class="container position-relative">
           <div class="mds-intro__text">
-            <form>
+            <form id="mds-form" novalidate>
               <div class="form-group">
-                <input type="text" class="form-control" id="input" placeholder="Vorname">
+                <input type="text" class="form-control" id="input-first-name" placeholder="Vorname">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="input" placeholder="Nachname">
+                <input type="text" class="form-control" id="input-last-name" placeholder="Nachname">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail">
+                <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="E-Mail">
                 <small id="emailHelp" class="form-text text-muted">Ihre E-Mail wird vertraulich behandelt.</small>
               </div>
               <div class="form-group">
-
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nachricht"></textarea>
+                <textarea class="form-control" id="input-text-message" rows="3" placeholder="Nachricht"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
             </form>
           </div>
         </div>
