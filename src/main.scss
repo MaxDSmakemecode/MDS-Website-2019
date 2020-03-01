@@ -233,6 +233,18 @@ h2.hero-title-second {
 
 // Modifiers
 
+// Bootstrap SCSS related modifiers
+.pt--10 {
+  padding-top: calc(#{$spacer} * 10)
+}
+
+.position--center {
+  // use bootstrap's 'position-absolute' for example
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // JS related modifiers
 .hide--element {
   display: none;
@@ -280,9 +292,7 @@ h2.hero-title-second {
 }
 
 
-
 // image slider 
-
 .mds-slide-container {
   position: relative;
   width: 100%;
