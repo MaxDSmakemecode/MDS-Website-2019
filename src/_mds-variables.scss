@@ -18,3 +18,12 @@ $navbar-light-disabled-color: #fff;
 .font-black {
   font-weight: $font-weight-bolder;
 }
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 800px,
+  xl: 900px
+);
