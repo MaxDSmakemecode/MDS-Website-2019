@@ -55,6 +55,7 @@ body {
   color: $white;
   font-weight: $font-weight-light;
   letter-spacing: 0.03rem;
+  overflow-x: hidden;
 }
 
 article {
@@ -193,16 +194,20 @@ h2.hero-title-second {
 .mds-title-text,
 .mds-title {
   position: absolute;
-  top: 35%;
-  left: 35%;
+  top: 0;
+  left: 0;
   font-size: $display2-size;
   text-align: center;
 }
 
 .mds-title-text {
-  top: 0;
-  left: 0;
   padding-top: 12%;
+}
+
+.mds-title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .port-subtitle {
