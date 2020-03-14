@@ -26,9 +26,7 @@
     "html-loader": "^0.5.5",
     "image-webpack-loader": "^4.6.0",
     "imports-loader": "^0.8.0",
-    "jquery": "^3.4.0",
     "node-sass": "^4.11.0",
-    "popper.js": "^1.15.0",
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",
     "sass-loader": "^7.1.0",
@@ -45,6 +43,8 @@
   "dependencies": {
     "acorn": "^6.4.1",
     "animejs": "^3.0.1",
-    "lodash": "^4.17.11"
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
+    "popper.js": "^1.16.1"
   }
 }

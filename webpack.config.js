@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-const $ = require('jquery')
+// const $ = require('jquery')
 
 module.exports = {
   devServer: {
@@ -51,8 +51,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
+      // $: 'jquery',
+      // jQuery: 'jquery'
     })
   ]
 }

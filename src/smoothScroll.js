@@ -2,7 +2,7 @@ export default function smoothScroll(){
     (function() {
         scrollTo();
     })();
-    
+
     function scrollTo() {
         const links = document.querySelectorAll('.scroll');
         links.forEach(each => (each.onclick = scrollAnchors));

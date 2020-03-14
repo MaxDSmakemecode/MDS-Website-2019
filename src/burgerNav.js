@@ -14,4 +14,18 @@ export default function burgerNav(){
     }
 
     window.addEventListener('scroll', transformNav)
+
+    const navLink = document.querySelectorAll('.nav-link');
+    console.log(navLink)
+
+    document.forEach(function(){
+        navLink.addEventListener('click', function(){
+            const visibleNav = document.querySelector('.show');
+            console.log(visibleNav);
+            if(visibleNav !== null){
+                console.log(visibleNav);
+                visibleNav.classList.remove('show');
+            }
+        })
+    })
 }
