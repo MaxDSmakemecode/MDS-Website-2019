@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-webpack",
-  "version": "1.0.0",
+  "version": "1.22.4",
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --color",
@@ -43,6 +43,7 @@
     "webpack": "^2.0.0 || ^3.0.0 || ^4.0.0"
   },
   "dependencies": {
+    "acorn": "^6.4.1",
     "animejs": "^3.0.1",
     "lodash": "^4.17.11"
   }
