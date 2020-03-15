@@ -2,10 +2,15 @@
 .navbar {
   position: fixed;
   width: 100%;
-  background: transparent;
   z-index: 999;
+  padding: 0;
 }
 
 .nav-link {
   @include transition
+}
+
+.mds-navbar-style {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 500ms ease-in-out;
 }

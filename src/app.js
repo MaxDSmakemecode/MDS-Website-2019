@@ -5,13 +5,16 @@ import 'bootstrap'
 import './main.scss'
 
 // add jQuery
-// import '../node_modules/jquery'
+import '../node_modules/jquery'
 
 // add popper.js
-// import '../node_modules/popper.js'
+import '../node_modules/popper.js'
 
 // add onload events
 import onLoadEvents from './onLoadEvents'
+
+// add nav toggle class for nav styling
+import navStyler from './navStyler'
 
 // smooth scrolling
 import burgerNav from './burgerNav'
@@ -34,6 +37,7 @@ import formValidation from './form'
 // calling all eventsafter DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
+  navStyler();
   smoothScroll();
   mouseFollower();
   burgerNav();
