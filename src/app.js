@@ -13,10 +13,10 @@ import '../node_modules/popper.js'
 // add onload events
 import onLoadEvents from './onLoadEvents'
 
-// add nav toggle class for nav styling
+// add nav stling on click
 import navStyler from './navStyler'
 
-// smooth scrolling
+// toggle burger nav when scrolled to certain point
 import burgerNav from './burgerNav'
 
 // smooth scrolling
@@ -38,9 +38,9 @@ import formValidation from './form'
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
   navStyler();
+  burgerNav();
   smoothScroll();
   mouseFollower();
-  burgerNav();
   scrollHandler();
   formValidation();
 

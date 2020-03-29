@@ -1,17 +1,17 @@
 export default function navStyler(){
-    // navbarStyle has the black transparent background. The goal is to show it whenever the menu is dropped down and else make it disappear
-    const navBarCollapse = document.querySelector('.mds-navbar-collapse');
-    const navbarStyle = document.querySelector('.mds-navbar-style');
-    const menuLink = document.querySelectorAll('.mds-menu-link');
+    const mdsNavbar = document.getElementById('mds-navbar');
+    const navbar = document.querySelector('.navbar');
+    const mdsMediaQuery = window.matchMedia('(min-width: 992px)');
+    const mdsMenuLink = document.querySelectorAll('.mds-menu-link');
 
-    menuLink.forEach(link => {
-        link.addEventListener('click', function(){
-            if(navBarCollapse.classList.contains(navbarStyle)){
-                navBarCollapse.classList.remove(navbarStyle)
+    mdsMenuLink.forEach(item => {
+        item.addEventListener('click', event => {
+            if(navbar.classList.contains('navbar-expand-lg') && mdsMediaQuery.matches){
+                mdsNavbar.classList.remove('mds-navbar-styler')
             }
             else{
-                navBarCollapse.classList.add(navbarStyle);
+                mdsNavbar.classList.toggle('mds-navbar-styler')
             }
         })
     })
-}
+};
