@@ -31,9 +31,6 @@ import scrollHandler from './scrollHandler'
 // slider
 import imgSlider from './imgSlider'
 
-// form
-import formValidation from './form'
-
 // calling all eventsafter DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
   smoothScroll();
   mouseFollower();
   scrollHandler();
-  formValidation();
 
   // multiple slider call
   const sliderOne = document.querySelector("#mds-slider-1");
