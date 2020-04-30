@@ -43,7 +43,7 @@
   "dependencies": {
     "acorn": "^6.4.1",
     "animejs": "^3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.11",
     "popper.js": "^1.16.1"
   }
