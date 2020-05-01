@@ -175,10 +175,15 @@ h2.hero-title-second {
   height: 100vh;
 }
 
-.mds-section {
+.mds-section,
+.mds-footer {
   width: 100%;
   height: auto;
   padding: 7% 0;
+}
+
+.mds-footer {
+  padding-top: 0;
 }
 
 .mds-intro__text {
