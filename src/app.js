@@ -47,8 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderFour = document.querySelector("#mds-slider-4");
   const sliderFive = document.querySelector("#mds-slider-5");
   const sliderSix = document.querySelector("#mds-slider-6");
+  const sliderSeven = document.querySelector("#mds-slider-7");
+  const sliderEight = document.querySelector("#mds-slider-8");
+  const sliderNine = document.querySelector("#mds-slider-9");
 
-  const sliders = [sliderOne, sliderTwo, sliderThree, sliderFour, sliderFive, sliderSix]
+  const sliders = [sliderOne, sliderTwo, sliderThree, sliderFour, sliderFive, sliderSix, sliderSeven, sliderEight, sliderNine]
 
   sliders.forEach(slider => {
     imgSlider(slider)

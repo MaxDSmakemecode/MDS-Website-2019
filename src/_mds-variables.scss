@@ -12,9 +12,11 @@ $font-weight-bolder: 700;
 $nav-link-padding-y: 3rem;
 $navbar-dark-color: #fff;
 $navbar-dark-hover-color: rgb(129, 129, 129);
-$navbar-dark-active-color: #fff;
+$navbar-dark-active-color: rgb(255, 196, 93);
 $navbar-light-disabled-color: #fff;
 $navbar-dark-toggler-border-color: transparent;
+$navbar-dark-brand-color: $navbar-dark-color;
+$navbar-dark-brand-hover-color: $navbar-dark-hover-color;
 
 .font-black {
   font-weight: $font-weight-bolder;

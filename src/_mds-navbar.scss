@@ -7,7 +7,8 @@
   align-items: flex-start;
 }
 
-.nav-link {
+.nav-link,
+.mds-menu-link {
   @include transition
 }
 
@@ -20,4 +21,38 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   transition: all 350ms ease-in-out;
+}
+
+.navbar-dark {
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+
+    @include hover-focus {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .nav-link.show {
+      color: $navbar-dark-color;
+    }
+
+    .active > .nav-link,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
 }
