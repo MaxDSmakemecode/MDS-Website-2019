@@ -1,14 +1,3 @@
-// custom scss for overriding bootstrap scss
-$blue: #0c2559;
-$purple: #390952;
-$cyan: #16605e;
-$gray-800: #21272d;
-$gray-900: #12161a;
-
-// line heights
-$headings-line-height: 1.7;
-// $display-line-height is the same
-
 // bootstrap scss imports + custom scss imports starting with 'mds-'
 
 // required
@@ -27,26 +16,14 @@ $headings-line-height: 1.7;
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
+@import "_mds-list-group";
 @import "_mds-reboot";
 @import '_mds-navbar';
 
 // complete bootstrap sass
 // @import 'node_modules/bootstrap/scss/bootstrap';
 
-// CUSTOM SCSS
-
-// Typography
-
-// font sizes
-$font-size-lg: $font-size-base * 1.07;
-
-$h1-font-size: $font-size-base * 7;
-$h2-font-size: $font-size-base * 8.665;
-$h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 5;
-$lead-font-size: $font-size-base * 2;
-
-$display4-size: 2.5rem;
+// CUSTOM SCSS ########################################################################
 
 // enable boostrap scss effects
 $enable-shadows: true;
@@ -123,8 +100,8 @@ section {
   overflow: hidden;
 }
 
-h1.hero-title-first,
-h2.hero-title-second {
+h1.hero-title__first,
+h2.hero-title__second {
   position: absolute;
   top: 2rem;
   left: 0;
@@ -139,7 +116,7 @@ h2.hero-title-second {
   transform: translate3d(10%,0,0);
 }
 
-h2.hero-title-second {
+h2.hero-title__second {
   top: 8rem;
   left: -5%;
   font-size: $h2-font-size;
@@ -230,20 +207,20 @@ h2.hero-title-second {
 
 // portfolio slide in elements
 
-.port-slide__in {
+.port-slide--in {
   opacity: 0;
   transition: all .35s;
 }
 
-.port-slide__in.port-align__left {
+.port-slide--in.port-align--left {
   transform: translate3d(-30%, 0, 0) scale(.8);
 }
 
-.port-slide__in.port-align__right {
+.port-slide--in.port-align__right {
   transform: translate3d(30%, 0, 0) scale(.8);
 }
 
-.port-slide__in.port-slide-in__active {
+.port-slide--in.port-slide-in--active {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
 }
@@ -370,14 +347,22 @@ h2.hero-title-second {
   transition: all 500ms;
 }
 
+.font-black {
+  font-weight: $font-weight-bolder;
+}
+
+.mds--transition {
+  transition: 350ms all ease-in-out;
+}
+
 // title specific media queries for large devices
 @media (min-width: 1199.99px) and (max-width: 1650px){
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 5rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     font-size: 5rem;
   }
 }
@@ -392,36 +377,36 @@ h2.hero-title-second {
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-only(lg){
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 4rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     font-size: 3.5rem;
   }
 }
 
 // title specific media queries for medium devices
 @media (min-width: 992px) and (max-width: 1000px){
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 3rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     font-size: 2.5rem;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-only(md){
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 3rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     top: 6rem;
     font-size: 2.5rem;
   }
@@ -447,12 +432,12 @@ h2.hero-title-second {
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-only(sm) {
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 2.5rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     top: 6rem;
     font-size: 2rem;
   }
@@ -463,13 +448,13 @@ h2.hero-title-second {
   .hero-title-box {
     padding-top: 100%;
   }
-  h1.hero-title-first,
-  h2.hero-title-second {
+  h1.hero-title__first,
+  h2.hero-title__second {
     font-size: 2.2rem;
     margin-left: -1.5rem;
   }
   
-  h2.hero-title-second {
+  h2.hero-title__second {
     top: 10rem;
     font-size: 2rem;
     margin-left: -3%;

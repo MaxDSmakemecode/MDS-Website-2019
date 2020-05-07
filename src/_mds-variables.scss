@@ -1,26 +1,41 @@
+// Color system
+$white: #fff;
+$blue: #0c2559;
+$purple: #390952;
+$cyan: #16605e;
+$orange:  #ffb65e;
+$gray-800: #21272d;
+$gray-900: #12161a;
+
+$primary: $white;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+  ),
+  $theme-colors
+);
+
 // Options
 $enable-gradients: true;
 
-// typography
-$font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif;
-
-// font-weights
-$font-weight-normal: 500;
-$font-weight-bolder: 700;
+// Links
+//
+// Style anchor elements.
+$link-color: theme-color("primary");
+$link-hover-color: $orange;
 
 // Navs
 $nav-link-padding-y: 3rem;
 $navbar-dark-color: #fff;
-$navbar-dark-hover-color: rgb(129, 129, 129);
-$navbar-dark-active-color: rgb(255, 196, 93);
+$navbar-dark-hover-color: $orange;
+$navbar-dark-active-color: $orange;
 $navbar-light-disabled-color: #fff;
 $navbar-dark-toggler-border-color: transparent;
 $navbar-dark-brand-color: $navbar-dark-color;
 $navbar-dark-brand-hover-color: $navbar-dark-hover-color;
-
-.font-black {
-  font-weight: $font-weight-bolder;
-}
 
 // Grid containers
 $container-max-widths: (
@@ -29,3 +44,26 @@ $container-max-widths: (
   lg: 800px,
   xl: 900px
 );
+
+// font sizes
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.07;
+
+// font-weights
+$font-weight-normal: 500;
+$font-weight-bolder: 700;
+
+$h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 8.665;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 5;
+// line heights
+$headings-line-height: 1.7;
+// $display-line-height is the same
+$display4-size: 2.5rem;
+$lead-font-size: $font-size-base * 2;
+
+// Typography
+$font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif;
+
+// List group
