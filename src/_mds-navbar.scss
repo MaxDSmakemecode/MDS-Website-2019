@@ -9,7 +9,7 @@
 
 .nav-link,
 .mds-menu-link {
-  @include transition
+  @include transition;
 }
 
 .navbar-collapse {

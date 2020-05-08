@@ -20,9 +20,6 @@ export default function scrollHandler(){
     // grab all scroll interactive slide in
     const imagesForFadeIn = document.querySelectorAll('.port-slide--in');
 
-    // grab portfolio top px
-    const portfolioSectionTop = document.getElementById('portfolio-title-page').getBoundingClientRect().top;
-
     function checkSlide(){
         imagesForFadeIn.forEach(fadeInImage => {
             // half way through the image

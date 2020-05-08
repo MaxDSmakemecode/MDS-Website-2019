@@ -3,6 +3,7 @@ export default function navStyler(){
     const navbar = document.querySelector('.navbar');
     const mdsMediaQuery = window.matchMedia('(min-width: 992px)');
     const mdsMenuLink = document.querySelectorAll('.mds-menu-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
 
     mdsMenuLink.forEach(item => {
         item.addEventListener('click', event => {
@@ -10,7 +11,7 @@ export default function navStyler(){
                 mdsNavbar.classList.remove('mds-navbar-styler')
             }
             else{
-                mdsNavbar.classList.toggle('mds-navbar-styler')
+                mdsNavbar.classList.toggle('mds-navbar-styler');
             }
         })
     })

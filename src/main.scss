@@ -416,9 +416,10 @@ h2.hero-title__second {
   .mds-title-text,
   .mds-title {
     font-size: 3rem;
+    line-height: 1;
   }
   .mds-intro__text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .port-subtitle {
     font-size: 2rem;
@@ -426,6 +427,9 @@ h2.hero-title__second {
   }
   .mds-text__box:first-child {
     margin-top: 0.5rem;
+  }
+  .mds-title-text {
+    padding-top: 10vh;
   }
 }
 
