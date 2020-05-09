@@ -13,10 +13,7 @@ import '../node_modules/popper.js'
 // add onload events
 import onLoadEvents from './onLoadEvents'
 
-// add nav stling on click
-import navStyler from './navStyler'
-
-// toggle burger nav when scrolled to certain point
+// toggle burger nav
 import burgerNav from './burgerNav'
 
 // smooth scrolling
@@ -31,10 +28,9 @@ import scrollHandler from './scrollHandler'
 // slider
 import imgSlider from './imgSlider'
 
-// calling all eventsafter DOM is loaded
+// calling all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
-  navStyler();
   burgerNav();
   smoothScroll();
   mouseFollower();
@@ -50,8 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderSeven = document.querySelector("#mds-slider-7");
   const sliderEight = document.querySelector("#mds-slider-8");
   const sliderNine = document.querySelector("#mds-slider-9");
+  const sliderTen = document.querySelector("#mds-slider-10");
 
-  const sliders = [sliderOne, sliderTwo, sliderThree, sliderFour, sliderFive, sliderSix, sliderSeven, sliderEight, sliderNine]
+  const sliders = [sliderOne, sliderTwo, sliderThree, sliderFour, sliderFive, sliderSix, sliderSeven, sliderEight, sliderNine, sliderTen]
 
   sliders.forEach(slider => {
     imgSlider(slider)

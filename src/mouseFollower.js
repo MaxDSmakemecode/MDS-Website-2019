@@ -32,12 +32,10 @@ export default function mouseFollower(){
         })
     }
 
-    let mediaQueryMatch = window.matchMedia('(max-width: 1000px)');
-
-    if(mediaQueryMatch.matches){
-        document.querySelector('.mousefollow-bg').delete;
+    if(window.innerWidth > '992'){
+        mouseFollowingFunction();
     }
     else{
-        mouseFollowingFunction();
+        window.removeEventListener('mousemove')
     }
 }

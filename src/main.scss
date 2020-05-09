@@ -7,15 +7,15 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 // optional
-@import "_mds-background";
-@import "_mds-gradients";
 @import "node_modules/bootstrap/scss/reboot";
-@import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
-@import "node_modules/bootstrap/scss/code";
+// @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
+@import "_mds-background";
+@import "_mds-gradients";
 @import "_mds-list-group";
 @import "_mds-reboot";
 @import '_mds-navbar';
@@ -161,6 +161,7 @@ h2.hero-title__second {
 
 .mds-footer {
   padding-top: 0;
+  height: 100vh;
 }
 
 .mds-intro__text {
@@ -430,6 +431,16 @@ h2.hero-title__second {
   }
   .mds-title-text {
     padding-top: 10vh;
+  }
+}
+
+// phones when flipped
+@media (max-height: 420px){
+  .mds-title-text {
+    font-size: 2rem;
+  }
+  .mds-intro__text {
+    font-size: 0.75rem;
   }
 }
 
