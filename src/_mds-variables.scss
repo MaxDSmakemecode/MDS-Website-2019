@@ -4,6 +4,7 @@ $blue: #0c2559;
 $purple: #390952;
 $cyan: #16605e;
 $orange:  #ffb65e;
+$gray-600: #8a9aa7;
 $gray-800: #21272d;
 $gray-900: #12161a;
 
@@ -66,4 +67,6 @@ $lead-font-size: $font-size-base * 2;
 // Typography
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif;
 
-// List group
+// Figures
+$figure-caption-font-size: 100%;
+$figure-caption-color: $gray-600;
