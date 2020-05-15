@@ -8,9 +8,7 @@
 
 // optional
 @import "node_modules/bootstrap/scss/reboot";
-// @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/images";
-// @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
@@ -25,11 +23,8 @@
 
 // CUSTOM SCSS ########################################################################
 
-// enable boostrap scss effects
-$enable-shadows: true;
 
 // General elements
-
 body {
   color: $white;
   font-weight: $font-weight-light;
@@ -52,24 +47,22 @@ section {
 }
 
 // landing page
-
 #hero {
   position: relative;
   height: 100vh;
   z-index: 0;
-}
-
-#hero:after {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  @include gradient-bg($blue);
-  z-index: 1;
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    @include gradient-bg($blue);
+    z-index: 1;
+  }
 }
 
 #hero:before,
@@ -130,7 +123,7 @@ h2.hero-title__second {
   right: 0;
   z-index: 9999;
   height: 100vh;
-  background: url(images/crosshairs.png);
+  background: url("images/crosshairs.png");
   overflow: hidden;
   opacity: 0;
   transition: 350ms all;
@@ -145,7 +138,6 @@ h2.hero-title__second {
 }
 
 // portfolio sections
-
 .portfolio-start {
   position: relative;
   width: 100%;
@@ -190,10 +182,6 @@ h2.hero-title__second {
   text-align: center;
 }
 
-.mds-title-text {
-  padding-top: 12%;
-}
-
 .mds-title {
   font-size: $display2-size;
   text-align: center;
@@ -206,7 +194,6 @@ h2.hero-title__second {
 }
 
 // portfolio slide in elements
-
 .port-slide--in {
   opacity: 0;
   transition: all .35s;
@@ -225,42 +212,14 @@ h2.hero-title__second {
   transform: translate3d(0, 0, 0) scale(1);
 }
 
-// Modifiers
-
-// Bootstrap SCSS related modifiers
-.pt--10 {
-  padding-top: calc(#{$spacer} * 10)
-}
-
-.position--center {
-  // use bootstrap's 'position-absolute' for example
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// Modifiers ###################
 
 // JS related modifiers
 
 // custom
-.hide--element {
-  display: none;
-}
-
-.translate3d--element {
-  transform: translate3d(15%,0,0);
-}
-
 .opacity-on-quarter--element {
   opacity: .25;
   transition: opacity 2s;
-}
-
-.opacity-on--element {
-  opacity: 1 !important;
-}
-
-.opacity-off--element {
-  opacity: 0;
 }
 
 .title-first--animation,
@@ -355,6 +314,10 @@ h2.hero-title__second {
   transition: 350ms all ease-in-out;
 }
 
+.navi-fontsize {
+  font-size: 3rem;
+}
+
 // title specific media queries for large devices
 @media (min-width: 1199.99px) and (max-width: 1650px){
   h1.hero-title__first,
@@ -429,16 +392,10 @@ h2.hero-title__second {
   .mds-text__box:first-child {
     margin-top: 0.5rem;
   }
-  .mds-title-text {
-    padding-top: 10vh;
-  }
 }
 
 // phones when flipped
 @media (max-height: 420px){
-  .mds-title-text {
-    font-size: 2rem;
-  }
   .mds-intro__text {
     font-size: 0.75rem;
   }
