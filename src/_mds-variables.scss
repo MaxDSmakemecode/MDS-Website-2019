@@ -19,6 +19,26 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+
+// font sizes
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.07;
+
+// font-weights
+$font-weight-normal: 500;
+$font-weight-bolder: 700;
+
+$h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 8.665;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 5;
+// line heights
+$headings-line-height: 1.7;
+// $display-line-height is the same
+$display4-size: 2.5rem;
+$lead-font-size: $font-size-base * 2;
+
+
 // Options
 $enable-shadows: true;
 $enable-gradients: true;
@@ -44,8 +64,9 @@ $spacers: map-merge(
 $link-color: theme-color("primary");
 $link-hover-color: $orange;
 
-// Navs
+// Navbar
 $nav-link-padding-y: 3rem;
+$navbar-brand-font-size: $lead-font-size;
 $navbar-dark-color: #fff;
 $navbar-dark-hover-color: $orange;
 $navbar-dark-active-color: $orange;
@@ -61,24 +82,6 @@ $container-max-widths: (
   lg: 800px,
   xl: 900px
 );
-
-// font sizes
-$font-size-base: 1rem;
-$font-size-lg: $font-size-base * 1.07;
-
-// font-weights
-$font-weight-normal: 500;
-$font-weight-bolder: 700;
-
-$h1-font-size: $font-size-base * 7;
-$h2-font-size: $font-size-base * 8.665;
-$h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 5;
-// line heights
-$headings-line-height: 1.7;
-// $display-line-height is the same
-$display4-size: 2.5rem;
-$lead-font-size: $font-size-base * 2;
 
 // Typography
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif;

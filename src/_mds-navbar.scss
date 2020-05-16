@@ -11,11 +11,6 @@
   margin-right: 0;
 }
 
-.nav-link,
-.mds-menu-link {
-  @include transition;
-}
-
 #mds-burger {
   z-index: 10;
 }
@@ -24,12 +19,8 @@
   height: 100vh;
 }
 
-.navbar-collapse {
-  flex-basis: auto;
-  width: 100%;
-  align-items: flex-start;
-  text-align: center;
-
+#mds-navbar {
+  font-size: $lead-font-size;
   &:before {
     content: '';
     position: absolute;
@@ -40,11 +31,21 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
-    transition: all 350ms ease-in-out;
+  }
+  &.mds-no--before,
+  &.mds-no--before .navbar-brand {
+    font-size: $font-size-base;
   }
   &.mds-no--before:before {
     display: none;
   }
+}
+
+.navbar-collapse {
+  flex-basis: auto;
+  width: 100%;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .navbar-dark {

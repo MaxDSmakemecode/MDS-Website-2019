@@ -15,7 +15,7 @@ export default function mouseFollower(){
                 mouseFollowImgX = - (mouseX / w) * 100,
                 mouseFollowImgY = - (mouseY / h) * 100;
             
-            mouseFollowImg.style['background-position'] = mouseFollowImgX + 'px ' + mouseFollowImgY + 'px';
+            mouseFollowImg.style['transform'] = 'translate3d(' + mouseFollowImgX + 'px, ' + mouseFollowImgY + 'px, 0)';
         }
 
         // window.addEventListener('resize', move);

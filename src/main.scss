@@ -116,17 +116,17 @@ h2.hero-title__second {
 }
 
 .mousefollow-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 0;
   z-index: 9999;
   height: 100vh;
   background: url("images/crosshairs.png");
   overflow: hidden;
   opacity: 0;
-  transition: 350ms all;
 }
 
 // main part
@@ -219,7 +219,8 @@ h2.hero-title__second {
 // custom
 .opacity-on-quarter--element {
   opacity: .25;
-  transition: opacity 2s;
+  transition: opacity 500ms;
+  width: 100%;
 }
 
 .title-first--animation,
@@ -245,7 +246,6 @@ h2.hero-title__second {
     transform: translate3d(15%,0,0);
   }
 }
-
 
 // image slider 
 .mds-slide-container {
