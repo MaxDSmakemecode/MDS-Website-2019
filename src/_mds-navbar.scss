@@ -9,6 +9,7 @@
 
 .navbar-brand {
   margin-right: 0;
+  width: 100%;
 }
 
 #mds-burger {
@@ -32,9 +33,12 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
   }
-  &.mds-no--before,
+  &.mds-no--before {
+    font-size: $font-size-base;
+  }
   &.mds-no--before .navbar-brand {
     font-size: $font-size-base;
+    width: auto;
   }
   &.mds-no--before:before {
     display: none;
