@@ -7,7 +7,8 @@ export default function burgerNav(){
     mdsMenuLinks.forEach(item => {
         item.addEventListener('click', event => {
             if(window.innerWidth <= '992'){
-                mdsNavbar.classList.remove('mds-no--before');           }
+                mdsNavbar.classList.remove('mds-no--before');
+            }
             else if(navBar.classList.contains('navbar-expand-lg') && window.innerWidth > '992'){
                 mdsNavbar.classList.add('mds-no--before');
             }
@@ -29,7 +30,7 @@ export default function burgerNav(){
         }
         else {
             navBar.classList.add('navbar-expand-lg');
-            mdsNavbar.classList.add('mds-no--before');
+            mdsNavbar.classList.add('mds-no--before'); 
         }
     }
 

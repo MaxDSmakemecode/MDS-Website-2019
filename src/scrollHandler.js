@@ -31,9 +31,9 @@ export default function scrollHandler(){
             if(isHalfShown && isNotScrolledPast){
                 fadeInImage.classList.add('port-slide-in--active');
             }
-            else{
-                fadeInImage.classList.remove('port-slide-in--active');
-            }
+            // else{
+            //     fadeInImage.classList.remove('port-slide-in--active');
+            // }
         })
         // console log a DOM node (console.log(fadeInImage)), then right click on returned node and click "Store as global variable";
         // 

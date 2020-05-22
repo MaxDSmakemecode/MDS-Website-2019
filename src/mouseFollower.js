@@ -36,6 +36,6 @@ export default function mouseFollower(){
         mouseFollowingFunction();
     }
     else{
-        window.removeEventListener('mousemove')
+        mouseFollowingFunction = null;
     }
 }
