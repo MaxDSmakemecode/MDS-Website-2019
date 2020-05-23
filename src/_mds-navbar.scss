@@ -133,8 +133,18 @@
 
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(sm){
+  .pb-md-5, .py-md-5 {
+    padding: 3rem !important;
+  }
+}
+
+// Phones with smaller heights
+@media (max-height: 660px){
+  .pb-md-5, .py-md-5 {
+    padding: 1rem !important;
+  }
   .navbar-brand {
-    margin-top: 25vh;
+    margin-top: 5%;
   }
 }
 
@@ -146,9 +156,24 @@
   }
 }
 
-// Phones when flipped
-@media (max-height: 570px){
+@media (max-height: 500px){
   .navbar-brand {
-    margin-top: 2vh;
+    margin-top: 5%;
+  }
+}
+
+@media (max-height: 440px) and (max-width: 890px){
+  .pb-md-5, .py-md-5 {
+    padding: 1rem !important;
+  }
+
+  .navbar-brand {
+    margin-top: 2.5%;
+  }
+}
+
+@media (max-height: 330px){
+  .navbar-brand {
+    margin-top: 0;
   }
 }
