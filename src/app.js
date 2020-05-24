@@ -32,9 +32,28 @@ import imgSlider from './imgSlider'
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
   burgerNav();
-  smoothScroll();
+  // smoothScroll();
   mouseFollower();
   scrollHandler();
+
+    // smooth scroll to section
+    const home = document.querySelector('#hero');
+    const about = document.querySelector('#about');
+    const portfolio = document.querySelector('#mds-portfolio');
+    const contact = document.querySelector('#contact');
+  
+    home.addEventListener('click', function(){
+      smoothScroll('#hero-target', 1000);
+    })
+    about.addEventListener('click', function(){
+      smoothScroll('#about-target', 1000);
+    })
+    portfolio.addEventListener('click', function(){
+      smoothScroll('#portfolio-title-page', 1000);
+    })
+    contact.addEventListener('click', function(){
+      smoothScroll('#contact-target', 1000);
+    })
 
   // multiple slider call
   const sliderOne = document.querySelector("#mds-slider-1");

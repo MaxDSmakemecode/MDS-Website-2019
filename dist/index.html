@@ -8,6 +8,7 @@
   <link ref="https://fonts.googleapis.com/css?family=Raleway:300,500,700,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./main.css" />
   <script src="https://kit.fontawesome.com/633c74ba93.js" crossorigin="anonymous" SameSite="none Secure"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script>
   <title>Max Schlautmann Portfolio</title>
 </head>
 
@@ -22,11 +23,11 @@
       <span class="icon-bar bottom-bar"></span>	
     </button>
     <div class="collapse navbar-collapse" id="mds-navbar-toggler">
-      <a class="navbar-brand scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
+      <a id="hero" class="navbar-brand scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
         href="#hero">MAX<span class="font-black">SCHLAUTMANN</span></a>
       <ul class="navbar-nav mr-auto mt-0">
         <li class="nav-item">
-          <a class="nav-link scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
+          <a id="about" class="nav-link scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
             href="#about">ÜBER MICH</a>
         </li>
         <li class="nav-item">
@@ -34,13 +35,13 @@
             data-target=".navbar-collapse.show" href="#portfolio-title-page">PORTFOLIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
+          <a id="contact" class="nav-link scroll pl-3 py-3 py-md-5 mds-menu-link position-relative" data-toggle="collapse" data-target=".navbar-collapse.show"
             href="#contact">KONTAKT</a>
         </li>
       </ul>
     </div>
   </nav>
-  <header id="hero">
+  <header id="hero-target">
     <div class="hero-title">
       <h1 class="hero-title__first">PERCEPTIVE <br class="d-block d-sm-none">JOURNEYS</h1>
       <h2 class="hero-title__second">TAILORED FOR YOU</h2>
@@ -49,7 +50,7 @@
     </div>
   </header>
   <article>
-    <section class="intro" id="about">
+    <section class="intro" id="about-target">
       <h3 class="mds-title-text pt-3 pt-md-5 position-relative">ÜBER MICH</h3>
       <div class="container position-relative">
         <figure class="pb-0 pb-md-3 text-center">
@@ -216,7 +217,7 @@
           <h4 class="port-subtitle">Herold-Center Norderstedt</h4>
           <div class="row">
             <div class="col-sm-12">
-              <div id="mds-slider-2" class="mds-slide-container mds-slide--mb-s">
+              <div id="mds-slider-2" class="mds-slide-container mds-slide--mb-m">
                 <div class="mds-prev"><i class="fas fa-angle-left"></i></div>
                 <div class="mds-next"><i class="fas fa-angle-right"></i></div>
                 <figure class="mds-slider mds-slider-first">
@@ -515,7 +516,7 @@
         </div>
       </section>
     </main>
-    <section class="mds-footer text-center position-relative" id="contact">
+    <section class="mds-footer text-center position-relative" id="contact-target">
       <div class="position-absolute mds--centered">
         <h3 class="mds-title-text">KONTAKT</h3>
         <div class="container position-relative mds-intro__text px-2">
