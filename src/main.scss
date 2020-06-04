@@ -25,6 +25,8 @@
 
 
 // General elements
+
+// Only applies to Firefox browser
 @-moz-document url-prefix() {
   html {
     scroll-behavior: smooth;
