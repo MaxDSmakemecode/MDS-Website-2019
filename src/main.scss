@@ -503,6 +503,10 @@ h2.hero-title__second {
 
 // Phones when flipped
 @media (max-height: 420px){
+  .hero-title {
+    top: 23%;
+  }
+
   .mds-intro__text {
     font-size: 0.75rem;
     line-height: 1.4;
@@ -538,14 +542,15 @@ h2.hero-title__second {
 
   h1.hero-title__first,
   h2.hero-title__second {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
     margin-left: -1.5rem;
   }
   
   h2.hero-title__second {
-    top: 10rem;
-    font-size: 2rem;
-    margin-left: -3%;
+    top: 8.5rem;
+    font-size: 2.7rem;
+    margin-left: -0.95rem;
+    left: 0;
   }
 
   .mds-slide--mb-ml {
