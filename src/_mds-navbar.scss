@@ -187,6 +187,15 @@
   }
 }
 
+@media (max-width: 469px) {
+  .icon-bar {
+    margin-top: 4px;
+  }
+  #mds-burger {
+    padding-top: 0.75rem;
+  }
+}
+
 @media (max-height: 330px){
   .navbar-brand {
     margin-top: 0;

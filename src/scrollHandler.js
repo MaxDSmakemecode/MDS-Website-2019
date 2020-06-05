@@ -31,9 +31,6 @@ export default function scrollHandler(){
             if(isHalfShown && isNotScrolledPast){
                 fadeInImage.classList.add('port-slide-in--active');
             }
-            // else{
-            //     fadeInImage.classList.remove('port-slide-in--active');
-            // }
         })
         // console log a DOM node (console.log(fadeInImage)), then right click on returned node and click "Store as global variable";
         // 
@@ -41,5 +38,12 @@ export default function scrollHandler(){
 
     // window event scroll
     // change the wait amount to customize amount of function calls in 'debounce(checkSlide, 500)' for example to have a function call every half second 
-    window.addEventListener('scroll', debounce(checkSlide));
+    if(window.innerWidth >= '992'){
+        window.addEventListener('scroll', debounce(checkSlide));
+    }
+    else{
+        imagesForFadeIn.forEach(fadeInImageForMobile => {
+            fadeInImageForMobile.classList.add('port-slide-in--active');
+        })
+    }
 }

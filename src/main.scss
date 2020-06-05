@@ -86,6 +86,10 @@ section {
 }
 
 // landing page
+#mobile-logo {
+  display: none;
+}
+
 #hero {
   position: relative;
   height: 100vh;
@@ -412,6 +416,22 @@ h2.hero-title__second {
   }
 }
 
+// Smaller devices (desktops, 992px and down)
+@include media-breakpoint-down(md){
+  #mobile-logo {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.7rem;
+    z-index: 998;
+    display: block;
+    color: #fff;
+    h1 {
+      font-size: 2.275rem;
+      font-weight: 300;
+    }
+  }
+}
+
 // title specific media queries for medium devices
 @media (min-width: 992px) and (max-width: 1000px){
   h1.hero-title__first,
@@ -541,5 +561,14 @@ h2.hero-title__second {
   .mds-slide--mb-s,
   .mds-slide--mb-m {
     margin-bottom: 4.8rem;
+  }
+}
+
+@media (max-width: 469px){
+  #mobile-logo {
+    top: 0.65rem;
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
