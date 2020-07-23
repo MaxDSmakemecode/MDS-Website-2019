@@ -15,7 +15,7 @@ function updateSlides(elements, index) {
   
     let activeIndex = 0
   
-    function handleLeftClick(event) {
+    function handleLeftClick() {
       if (activeIndex === 0) {
         activeIndex = slides.length - 1
       } else {
@@ -25,7 +25,7 @@ function updateSlides(elements, index) {
       updateSlides(slides, activeIndex)
     }
   
-    function handleRightClick(event) {
+    function handleRightClick() {
       if (activeIndex === slides.length - 1) {
         activeIndex = 0
       } else {
