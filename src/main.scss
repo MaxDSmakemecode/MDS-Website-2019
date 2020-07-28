@@ -582,6 +582,13 @@ h2.hero-title__second {
   }
 }
 
+// imprint 
+.imprint-text {
+  position: relative;
+  z-index: 10;
+  padding: 1rem;
+}
+
 // cookie banner
 .cookie-banner {
   position: fixed;
