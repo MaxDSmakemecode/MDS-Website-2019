@@ -28,6 +28,9 @@ import scrollHandler from './scrollHandler'
 // slider
 import imgSlider from './imgSlider'
 
+// Cookie Hider
+import cookieHider from './cookieHider'
+
 // calling all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   smoothScroll();
   mouseFollower();
   scrollHandler();
+  cookieHider();
 
   // multiple slider call
   const sliderOne = document.querySelector("#mds-slider-1");

@@ -581,3 +581,45 @@ h2.hero-title__second {
     }
   }
 }
+
+// cookie banner
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width: 100%;
+  padding: 1rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.cookie-banner-hider {
+  display: none;
+}
+
+.cookie-button-box {
+  width: 21.6rem;
+  margin: 0 auto;
+}
+
+.cookie-button-ok,
+.cookie-button-imprint {
+  width: 10rem;
+  border: 0.2rem solid #fff;
+  color: #ffffff;
+  background: none;
+  transition: all 350ms;
+  margin: 0 0.3rem;
+}
+
+.cookie-button-ok:hover,
+.cookie-button-imprint:hover {
+  opacity: 0.5;
+}
+
+.cookie-button-ok a:hover,
+.cookie-button-imprint a:hover {
+  color: #fff;
+  text-decoration: none;
+}
