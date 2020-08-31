@@ -13,6 +13,9 @@ import '../node_modules/popper.js'
 // add onload events
 import onLoadEvents from './onLoadEvents'
 
+// Cookie Hider
+import lazyLoad from './lazyLoad'
+
 // toggle burger nav
 import burgerNav from './burgerNav'
 
@@ -34,6 +37,7 @@ import cookieHider from './cookieHider'
 // calling all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {  
   onLoadEvents();
+  lazyLoad();
   burgerNav();
   smoothScroll();
   mouseFollower();

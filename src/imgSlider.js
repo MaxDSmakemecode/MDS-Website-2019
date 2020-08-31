@@ -28,7 +28,8 @@ function updateSlides(elements, index) {
     function handleRightClick() {
       if (activeIndex === slides.length - 1) {
         activeIndex = 0
-      } else {
+      } 
+      else {
         activeIndex++
       }
   
