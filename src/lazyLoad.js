@@ -12,7 +12,7 @@ export default function lazyLoad(){
 
     const imgOptions = {
         threshold: 0,
-        rootMargin: "0px"
+        rootMargin: "-1000px 0px 0px 0px"
     };
 
     const imgObserver = new IntersectionObserver((entries, imgObserver) => {
